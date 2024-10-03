@@ -17,13 +17,13 @@
         <h1>Madagascar</h1>
     </header>
     <main>
-        <div class="card">
-            <div class="background">
-                <picture>
-                    <source srcset="/images/lemurs.webp" type="image/webp">
-                    <img src="/images/lemurs.jpg" srcset="/images/lemurs-320.jpg 320w, /images/lemurs-480.jpg 480w, /images/lemurs.jpg 800w" sizes="(max-width: 600px) 480px, 800px" alt="Lemurs">
-                </picture>
-            </div>
+        <div class="background">
+            <picture>
+                <source srcset="/images/lemurs.webp" type="image/webp">
+                <img src="/images/lemurs.jpg" alt="Lemurs">
+            </picture>
+        </div>
+        <div class="content">
             <div class="info">
                 <h2>Data</h2>
                 <p><strong>Area:</strong> 587,041 km²</p>
@@ -41,16 +41,16 @@
                 <p><strong>Conditions:</strong> Partly Cloudy</p>
                 <p><strong>Wind:</strong> 5 km/h</p>
                 <p class="wind-chill"><strong>Wind Chill:</strong> 9.8°C</p>
+                <!-- SVG for mobile view -->
+                <svg class="weather-icon" width="50" height="50" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+                </svg>
             </div>
         </div>
-        <!-- Adding an SVG element -->
-        <svg width="100" height="100" viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
-        </svg>
     </main>
     <footer class="footer">
-        <p>©2024 Rubi Madagascar</p>
-        <p>Last Modification: 20/08/2022 22:47:47</p>
+        <p class="year"></p>
+        <p class="last-modified"></p>
     </footer>
 </body>
 </html>
