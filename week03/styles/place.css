@@ -1,13 +1,13 @@
 :root {
-    --primary-color: #007849; /* Green from Madagascar flag */
-    --secondary-color: #ff0000; /* Red from Madagascar flag */
+    --primary-color: #007849; /* Green from Haiti flag */
+    --secondary-color: #ff0000; /* Red from Haiti flag */
     --background-color: #f0f0f0;
     --text-color: #333;
     --weather-icon: "⛅"; /* Weather icon */
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
