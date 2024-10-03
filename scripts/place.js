@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Update footer with current year and last modified date
-    document.querySelector('.year').textContent = `©${new Date().getFullYear()} Rubi Madagascar`;
+    document.querySelector('.year').textContent = `©${new Date().getFullYear()} 🌴Smith Eutrope Zephirin🌴 Madagascar`;
     document.querySelector('.last-modified').textContent = `Last Modification: ${document.lastModified}`;
 
     // Calculate wind chill factor
