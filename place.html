@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
 </head>
 <body>
@@ -19,7 +19,10 @@
     <main>
         <div class="card">
             <div class="background">
-                <img src="/images/lemurs.jpg" alt="Lemurs">
+                <picture>
+                    <source srcset="/images/lemurs.webp" type="image/webp">
+                    <img src="/images/lemur.jpg" srcset="/images/lemurs-320.jpg 320w, /images/lemurs-480.jpg 480w, /images/lemurs.jpg 800w" sizes="(max-width: 600px) 480px, 800px" alt="Lemurs">
+                </picture>
             </div>
             <div class="info">
                 <p><strong>Area:</strong> 587,041 km²</p>
