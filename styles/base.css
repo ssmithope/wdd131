@@ -1,12 +1,12 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     background-color: #e0f7fa;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #00796b;
+    background-color: #0a0624;
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -20,7 +20,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 110px;
 }
 
 nav ul li a {
@@ -28,33 +28,91 @@ nav ul li a {
     text-decoration: none;
 }
 
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
 main {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-}
-
-.left-column, .right-column {
-    width: 45%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .left-column {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 5px;
+    overflow: auto;
 }
 
 .right-column {
-    background-color: #ffffff;
+    background-color: #e0f7fa;
     padding: 20px;
     border-radius: 5px;
 }
 
-footer {
+.right-column h2 {
     background-color: #00796b;
     color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center; /* Center align the header text */
+    white-space: nowrap;
+}
+
+.right-column ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.right-column ul li {
+    margin: 10px 0;
+}
+
+.right-column ul li a {
+    color: #00796b;
+    text-decoration: none;
+}
+
+.right-column ul li a:hover {
+    text-decoration: line-through;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.left-column img {
+    max-width: 200px; /* Adjust the size as needed */
+    display: block;
+    margin: 10px 0;
+}
+
+.profile-pic {
+    float: right;
+    margin-left: 20px;
+    width: 100px;
+
+}
+
+.flag-pic {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: auto;
+   
+}
+
+footer {
+    background-color: #616574;
+    color: white;
     text-align: center;
-    padding: 5px 0;
+    padding: 1px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
