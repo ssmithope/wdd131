@@ -11,9 +11,3 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
-
-.gallery img {
-    width: 100%; /* Adjust the width as needed */
-    height: auto; /* Maintains the aspect ratio */
-    max-width: 300px; /* Set a maximum width if needed */
-}
