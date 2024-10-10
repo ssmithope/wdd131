@@ -4,14 +4,17 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.last-modified').textContent = `Last Modification: ${document.lastModified}`;
 
     // Calculate wind chill factor
-    const temp = 10; // Example temperature
-    const windSpeed = 5; // Example wind speed
+    const temp = 10; // Example temperature in Celsius
+    const windSpeed = 5; // Example wind speed in km/h
 
     function calculateWindChill(temp, windSpeed) {
-        return Math.round(35.74 + 0.6215 * temp - 35.75 * Math.pow(windSpeed, 0.16) + 0.4275 * temp * Math.pow(windSpeed, 0.16));
+        if (temp <= 10 && windSpeed >= 4.8) { // Metric condition
+            return (13.12 + 0.6215 * temp - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temp * Math.pow(windSpeed, 0.16)).toFixed(1);
+        } else {
+            return 'N/A'; // Wind chill not applicable
+        }
     }
 
-    if (temp <= 50 && windSpeed > 3) {
-        document.querySelector('.wind-chill').textContent = `Wind Chill: ${calculateWindChill(temp, windSpeed)}°C`;
-    }
+    const windChill = calculateWindChill(temp, windSpeed);
+    document.querySelector('.wind-chill').textContent = `Wind Chill: ${windChill}°C`;
 });
