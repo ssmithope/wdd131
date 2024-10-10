@@ -39,7 +39,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ccc; /* Change color on hover */
+    color: #f00; /* Change color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
 }
 
 .hamburger {
@@ -84,6 +85,11 @@ figure {
     width: 100%;
     height: auto;
     max-width: 300px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 footer {
