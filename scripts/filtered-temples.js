@@ -58,48 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
             dedicated: "1983, December, 2",
             area: 116642,
             imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
-        },
-        {
-            templeName: "San Diego California",
-            location: "San Diego, California, United States",
-            dedicated: "1993, April, 25",
-            area: 72000,
-            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/san-diego-california/400x250/san-diego-california-temple-lds-273999-wallpaper.jpg"
-        },
-        {
-            templeName: "Salt Lake",
-            location: "Salt Lake City, Utah, United States",
-            dedicated: "1893, April, 6",
-            area: 253015,
-            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake/400x250/salt-lake-temple-lds-273999-wallpaper.jpg"
-        },
-        {
-            templeName: "Tokyo Japan",
-            location: "Tokyo, Japan",
-            dedicated: "1980, October, 27",
-            area: 52000,
-            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/400x250/tokyo-japan-temple-lds-273999-wallpaper.jpg"
-        },
-        {
-            templeName: "Rome Italy",
-            location: "Rome, Italy",
-            dedicated: "2019, March, 10",
-            area: 162000,
-            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-temple-1.jpeg"
-        },
-        {
-            templeName: "Accra Ghana",
-            location: "Accra, Ghana",
-            dedicated: "2004, January, 11",
-            area: 17000,
-            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/accra-ghana/400x250/accra-ghana-temple-2.jpeg"
-        },
-        {
-            templeName: "Nashville Tennessee",
-            location: "Nashville, Tennessee, United States",
-            dedicated: "2000, May, 21",
-            area: 10700,
-            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/nashville-tennessee/400x250/nashville-tennessee-temple-1.jpeg"
         }
     ];
 
