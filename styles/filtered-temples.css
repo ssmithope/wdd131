@@ -63,6 +63,12 @@ figure {
     margin: 0;
 }
 
+.gallery img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+}
+
 footer {
     text-align: center;
     padding: 1rem;
@@ -70,8 +76,14 @@ footer {
     color: var(--secondary-color);
 }
 
-.gallery img {
-    width: 100%;
-    height: auto;
-    max-width: 300px;
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+    nav ul {
+        display: flex;
+    }
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

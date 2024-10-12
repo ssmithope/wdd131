@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('nav ul');
-
+    
     hamburger.addEventListener('click', () => {
         navMenu.classList.toggle('show');
         hamburger.textContent = navMenu.classList.contains('show') ? 'X' : '☰';
@@ -59,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
             area: 116642,
             imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
         },
-        // Add more temple objects here...
         {
             templeName: "San Diego California",
             location: "San Diego, California, United States",
@@ -80,6 +79,27 @@ document.addEventListener('DOMContentLoaded', () => {
             dedicated: "1980, October, 27",
             area: 52000,
             imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/400x250/tokyo-japan-temple-lds-273999-wallpaper.jpg"
+        },
+        {
+            templeName: "Rome Italy",
+            location: "Rome, Italy",
+            dedicated: "2019, March, 10",
+            area: 162000,
+            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-temple-1.jpeg"
+        },
+        {
+            templeName: "Accra Ghana",
+            location: "Accra, Ghana",
+            dedicated: "2004, January, 11",
+            area: 17000,
+            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/accra-ghana/400x250/accra-ghana-temple-2.jpeg"
+        },
+        {
+            templeName: "Nashville Tennessee",
+            location: "Nashville, Tennessee, United States",
+            dedicated: "2000, May, 21",
+            area: 10700,
+            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/nashville-tennessee/400x250/nashville-tennessee-temple-1.jpeg"
         }
     ];
 
@@ -88,11 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function displayTemples(filteredTemples) {
         gallery.innerHTML = '';
         filteredTemples.forEach(temple => {
+            console.log(temple);
             const figure = document.createElement('figure');
-            const img = document.createElement('img');
-            img.src = temple.imageUrl;
-            img.alt = `${temple.templeName} Temple`;
-            img.loading = 'lazy';
             const figcaption = document.createElement('figcaption');
             figcaption.innerHTML = `
                 <h3>${temple.templeName}</h3>
@@ -100,8 +117,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>Dedicated: ${temple.dedicated}</p>
                 <p>Area: ${temple.area} sq ft</p>
             `;
-            figure.appendChild(img);
+            const img = document.createElement('img');
+            img.src = temple.imageUrl;
+            img.alt = `${temple.templeName} Temple`;
+            img.loading = 'lazy';
             figure.appendChild(figcaption);
+            figure.appendChild(img);
             gallery.appendChild(figure);
         });
     }
@@ -135,6 +156,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Display all temples by default
-    filterTemples('all');
+    filterTemples('all'); // Display all temples by default
 });
