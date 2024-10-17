@@ -1,0 +1,38 @@
+/* Base styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FFFFFF; /* White */
+    color: #000000; /* Black */
+}
+header, footer {
+    background-color: #0033A0; /* Blue */
+    color: #FFFFFF; /* White */
+    text-align: center;
+    padding: 10px;
+}
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #D21034; /* Red */
+}
+.content {
+    margin: 20px;
+}
+
+/* Styles for small screens */
+@media (max-width: 767px) {
+    .content section {
+        margin-bottom: 20px;
+    }
+}
+
+/* Styles for large screens */
+@media (min-width: 768px) {
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .content section {
+        flex: 1 1 30%;
+        margin: 10px;
+    }
+}
