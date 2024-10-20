@@ -71,6 +71,17 @@ legend {
     margin-bottom: 10px;
 }
 
+/* Align rating scores to the left */
+.rating-group {
+    display: flex;
+    align-items: center;
+}
+
+.rating-group label {
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
 /* Accessibility enhancements */
 input:focus,
 select:focus,
@@ -78,4 +89,11 @@ textarea:focus {
     outline: none;
     border-color: #4CAF50;
     box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: black;  /* Ensure text color is black */
 }

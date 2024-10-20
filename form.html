@@ -9,26 +9,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/form.css">
 </head>
 <body>
-    <h1>Product Review Form</h1>
+    <h1>Product Review</h1>
     <form id="review-form" action="review.html" method="get">
         <!-- Product Name -->
         <label for="product">Product Name</label>
         <select id="product" name="product" required>
-            <option value="" disabled selected>Select a Product ...</option>
-            <!-- Dynamically populated options -->
+            <option value="" disabled selected>Choose a Product ...</option>
         </select>
 
         <!-- Overall Rating -->
         <fieldset>
             <legend>Overall Rating</legend>
-            <label><input type="radio" name="rating" value="1" required> 1 ☆</label>
-            <label><input type="radio" name="rating" value="2" required> 2 ☆</label>
-            <label><input type="radio" name="rating" value="3" required> 3 ☆</label>
-            <label><input type="radio" name="rating" value="4" required> 4 ☆</label>
-            <label><input type="radio" name="rating" value="5" required> 5 ☆</label>
+            <label><input type="radio" name="rating" value="1" required> ☆  ★★  ★★★  ★★★★  ★★★★★</label>
+            
         </fieldset>
 
         <!-- Date of Installation -->
@@ -37,25 +33,29 @@
 
         <!-- Useful Features -->
         <fieldset>
-            <legend>Useful Features</legend>
-            <label><input type="checkbox" id="feature1" name="features" value="Feature 1"> Feature 1</label>
-            <label><input type="checkbox" id="feature2" name="features" value="Feature 2"> Feature 2</label>
-            <label><input type="checkbox" id="feature3" name="features" value="Feature 3"> Feature 3</label>
-            <label><input type="checkbox" id="feature4" name="features" value="Feature 4"> Feature 4</label>
+            <legend>Which features did you find useful in the product? 
+                (Check all that apply) </legend>
+            <label><input type="checkbox" id="feature1" name="features" value="Feature 1"> Durability</label>
+            <label><input type="checkbox" id="feature2" name="features" value="Feature 2"> Ease of use</label>
+            <label><input type="checkbox" id="feature3" name="features" value="Feature 3"> Performance</label>
+            <label><input type="checkbox" id="feature4" name="features" value="Feature 4"> Design</label>
         </fieldset>
 
         <!-- Written Review -->
-        <label for="review">Written Review</label>
+        <label for="review">Written Review (Optional)</label>
         <textarea id="review" name="review"></textarea>
 
         <!-- User Name -->
-        <label for="username">User Name</label>
+        <label for="username">Your Name (Optional)</label>
         <input type="text" id="username" name="username">
 
         <!-- Form Submission -->
-        <input type="submit" value="Submit">
+        <input type="submit" value="Post Review">
     </form>
     <script src="scripts/script.js" defer></script>
-    <!-- Footer content here -->
+    
+    <footer>
+        <p>© 2024 🌴Smith Eutrope Zephirin🌴 Last Modified: <span id="last-modified"></span></p>
+    </footer>
 </body>
 </html>
