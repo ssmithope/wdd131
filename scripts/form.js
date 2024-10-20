@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("JavaScript is running..."); // Check if this prints in the console
-
     const productSelect = document.getElementById("product");
     const products = [
         { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },

@@ -74,11 +74,10 @@ legend {
 /* Align rating scores to the left */
 .rating-group {
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
 
 .rating-group label {
-    margin-right: 10px;
     margin-bottom: 5px;
 }
 
