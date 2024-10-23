@@ -11,3 +11,4 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Current Year:', currentYear);
     console.log('Last Modified:', lastModified);
 });
+u
