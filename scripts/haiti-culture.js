@@ -1,14 +1,44 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contactForm');
-    const currentYear = new Date().getFullYear();
-    const lastModified = document.lastModified;
+// Function to display a message when the form is submitted
+function showMessage(event) {
+    event.preventDefault();
+    const feedback = document.getElementById('form-feedback');
+    feedback.textContent = "Thank you for contacting us! We'll get back to you soon.";
+    feedback.style.color = "green";
+    event.target.reset();
+}
 
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        alert('Form submitted!');
+// Function to show/hide the back-to-top button
+function toggleBackToTop() {
+    const backToTop = document.getElementById('back-to-top');
+    if (window.scrollY > 300) {
+        backToTop.style.display = 'block';
+    } else {
+        backToTop.style.display = 'none';
+    }
+}
+
+// Function to scroll back to the top
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Add event listeners
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('form');
+    form.addEventListener('submit', showMessage);
+    const backToTop = document.getElementById('back-to-top');
+    backToTop.addEventListener('click', scrollToTop);
+    window.addEventListener('scroll', toggleBackToTop);
+
+    // Add smooth scrolling to navigation links
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        });
     });
-
-    console.log('Current Year:', currentYear);
-    console.log('Last Modified:', lastModified);
 });
-u
+console.log('Discover Haiti script loaded!');
