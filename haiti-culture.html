@@ -11,43 +11,81 @@
 </head>
 <body>
     <header>
-        <h1>Caribbean Hidden Treasures</h1>
-    </header>
-    <main class="content">
-        <section>
-            <h2>Site Name</h2>
-            <p>"Discover Haiti" - In the purpose to reflect the website’s goal of uncovering and showcasing the vibrant culture, history, and traditions of Haiti.</p>
-        </section>
-        <section>
-            <h2>Site Purpose</h2>
-            <p>The site objectif is to educate visitors about Haiti's rich cultural heritage, history, and traditions, providing a comprehensive resource for anyone interested in learning more about this fascinating country even though the country politic situation is worst.</p>
-        </section>
-        <section>
-            <h2>Scenarios</h2>
+        <h1>Discover Haiti</h1>
+        <nav>
             <ul>
-                <li>What are some traditional Haitian dishes?</li>
-                <li>Where can I find information on Haitian festivals and events?</li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#food">Food</a></li>
+                <li><a href="#festivals">Festivals</a></li>
+                <li><a href="#nature">Nature</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </section>
-        <section>
-            <h2>Color Scheme</h2>
-            <p>Primary Colors: Blue (#0033A0) and Black (#D21034)</p>
-            <p>Secondary Colors: White (#FFFFFF) and Gold (#FFD700)</p>
-            <p>Blue and Red: Used predominantly in the header and footer. White: Background and text areas. Gold: Highlights and buttons.</p>
-        </section>
-        <section>
-            <h2>Typography</h2>
-            <p>Headings: Montserrat</p>
-            <p>Body Text: Open Sans</p>
-            <p>Montserrat for headings to give a bold, impactful look. Open Sans for body text for readability.</p>
-        </section>
-        <section>
-            <h2>Wireframes</h2>
-            <p>Placeholder for sketches representing the layout of the home page for mobile and desktop views.</p>
-        </section>
-    </main>
+        </nav>
+    </header>
+    <div class="container">
+        <main class="content">
+            <section>
+                <h2>About Haiti</h2>
+                <p>Haiti is a country rich in history, culture, and traditions. Known for its vibrant art scene, lively festivals, and stunning natural landscapes, Haiti offers a unique experience for visitors and researchers alike.</p>
+                <img src="images/haiti-overview.jpg" alt="Overview of Haiti" loading="lazy">
+                <img src="images/haiti-overview1.jpg" alt="Overview of Haiti" loading="lazy">
+                <img src="images/haiti-overview2.jpg" alt="Overview of Haiti" loading="lazy">
+            </section>
+            <section>
+                <h2>Culture and Traditions</h2>
+                <p>From the rhythmic beats of compas music to the colorful tapestries of vodou ceremonies, Haiti's culture is a vibrant tapestry of influences and traditions.</p>
+                <img src="images/haiti-culture.jpg" alt="Haitian Culture" loading="lazy">
+            </section>
+            <section>
+                <h2>Food and Cuisine</h2>
+                <p>Haitian cuisine is a blend of African, French, and indigenous influences. Discover traditional dishes like griot, akra, and pikliz.</p>
+                <img src="images/haiti-food1.jpg" alt="Haitian Food" loading="lazy">
+                <img src="images/haiti-food2.jpg" alt="Haitian Food" loading="lazy">
+                <img src="images/haiti-food3.jpg" alt="Haitian Food" loading="lazy">
+                <img src="images/haiti-food4.jpg" alt="Haitian Food" loading="lazy">
+            </section>
+            <section>
+                <h2>Festivals and Events</h2>
+                <p>Haiti hosts a variety of festivals throughout the year, including the famous Carnival and the Vodou Festival in Saut-d'Eau.</p>
+                <img src="images/haiti-festivals.jpg" alt="Haitian Festivals" loading="lazy">
+                <img src="images/haiti-festivals1.jpg" alt="Haitian Festivals" loading="lazy">
+                <img src="images/haiti-festivals2.jpg" alt="Haitian Festivals" loading="lazy">
+            </section>
+            <section>
+                <h2>Natural Beauty</h2>
+                <p>From the beaches of Labadee to the mountains of Kenscoff, Haiti's natural beauty is breathtaking and diverse.</p>
+                <img src="images/haiti-nature.jpg" alt="Haitian Natural Beauty" loading="lazy">
+            </section>
+            <section id="surface-info">
+                <h2>Surface Information</h2>
+                <p><strong>Population:</strong> Approximately 11.1 million</p>
+                <p><strong>Area:</strong> 27,750 square kilometers</p>
+                <p><strong>Capital:</strong> Port-au-Prince</p>
+                <p><strong>Official Languages:</strong> Haitian Creole, French</p>
+                <a href="https://education.nationalgeographic.org/resource/territory/" target="_blank">
+                    <img src="images/haiti-map.jpg" alt="Map of Haiti" loading="lazy">
+                </a>
+            </section>
+            <section>
+                <h2>Contact Us</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                <p id="form-feedback"></p> <!-- Placeholder for form feedback -->
+            </section>
+        </main>
+    </div>
     <footer>
-        <p>&copy; 2024 Discover Haiti</p>
+        <p>&copy; 2024 Discover Haiti | <a href="https://facebook.com" target="_blank">Facebook</a> | <a href="https://twitter.com" target="_blank">Twitter</a> | <a href="https://instagram.com" target="_blank">Instagram</a></p>
     </footer>
+    <button id="back-to-top" style="display: none;">Back to Top</button> <!-- Back-to-top button -->
+    <script src="script.js"></script>
 </body>
 </html>
