@@ -1,35 +1,32 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const productSelect = document.getElementById("product");
-    const products = [
-        { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
-        { id: "fc-2050", name: "power laces", averagerating: 4.7 },
-        { id: "fs-1987", name: "time circuits", averagerating: 3.5 },
-        { id: "ac-2000", name: "low voltage reactor", averagerating: 3.9 },
-        { id: "jj-1969", name: "warp equalizer", averagerating: 5.0 }
-    ];
+document.addEventListener('DOMContentLoaded', function() {
+    // Dynamic build of the Product Name field
+    const products = ['Product 1', 'Product 2', 'Product 3'];
+    const productSelect = document.getElementById('product');
 
     products.forEach(product => {
-        const option = document.createElement("option");
-        option.value = product.id;
-        option.textContent = product.name;
+        const option = document.createElement('option');
+        option.value = product;
+        option.textContent = product;
         productSelect.appendChild(option);
     });
 
-    // Counter in localStorage
-    const counterKey = 'reviewCounter';
-    const reviewCounter = localStorage.getItem(counterKey) ? parseInt(localStorage.getItem(counterKey)) : 0;
+    // Local storage feature for form data
+    const reviewForm = document.getElementById('review-form');
+    reviewForm.addEventListener('submit', function(event) {
+        event.preventDefault();
 
-    document.getElementById('review-form').addEventListener('submit', function() {
-        localStorage.setItem(counterKey, reviewCounter + 1);
+        // Save form data to localStorage
+        const formData = new FormData(reviewForm);
+        for (let [key, value] of formData.entries()) {
+            localStorage.setItem(key, value);
+        }
+
+        // Redirect or provide feedback
+        alert('Review submitted successfully!');
+        reviewForm.reset();
     });
 
-    console.log(`Number of reviews completed: ${reviewCounter}`);
-
-    // Last modification date and time
-    const lastModifiedSpan = document.getElementById("last-modified");
-    if (lastModifiedSpan) {
-        const lastModified = new Date(document.lastModified);
-        const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
-        lastModifiedSpan.textContent = lastModified.toLocaleString('en-US', options);
-    }
+    // Display last modified date
+    const lastModified = document.getElementById('last-modified');
+    lastModified.textContent = document.lastModified;
 });

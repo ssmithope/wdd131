@@ -19,46 +19,54 @@
         <select id="product" name="product" required>
             <option value="" disabled selected>Choose a Product ...</option>
         </select>
-
         <!-- Overall Rating -->
-        <fieldset>
+        <fieldset class="rating-group">
             <legend>Overall Rating</legend>
-            <label><input type="radio" name="rating" value="1" required>  ☆</label>
-            <label><input type="radio" name="rating" value="2" required>  ☆☆</label>
-            <label><input type="radio" name="rating" value="3" required>  ☆☆☆</label>
-            <label><input type="radio" name="rating" value="4" required>  ☆☆☆☆</label>
-            <label><input type="radio" name="rating" value="5" required>  ☆☆☆☆☆</label>
+            <label>
+                <input type="radio" name="rating" value="1" required> 
+                ☆
+            </label>
+            <label>
+                <input type="radio" name="rating" value="2" required> 
+                ☆☆
+            </label>
+            <label>
+                <input type="radio" name="rating" value="3" required> 
+                ☆☆☆
+            </label>
+            <label>
+                <input type="radio" name="rating" value="4" required> 
+                ☆☆☆☆
+            </label>
+            <label>
+                <input type="radio" name="rating" value="5" required> 
+                ☆☆☆☆☆
+            </label>
         </fieldset>
-
         <!-- Date of Installation -->
         <label for="installation-date">Date of Installation</label>
         <input type="date" id="installation-date" name="installation-date" required>
-
         <!-- Useful Features -->
         <fieldset>
-            <legend>Which features did you find useful in the product? 
-                (Check all that apply) </legend>
+            <legend>Which features did you find useful in the product?</legend>
+            <em>(Check all that apply)</em>
             <label><input type="checkbox" id="feature1" name="features" value="Feature 1"> Durability</label>
             <label><input type="checkbox" id="feature2" name="features" value="Feature 2"> Ease of use</label>
             <label><input type="checkbox" id="feature3" name="features" value="Feature 3"> Performance</label>
             <label><input type="checkbox" id="feature4" name="features" value="Feature 4"> Design</label>
         </fieldset>
-
         <!-- Written Review -->
         <label for="review">Written Review (Optional)</label>
         <textarea id="review" name="review"></textarea>
-
         <!-- User Name -->
         <label for="username">Your Name (Optional)</label>
         <input type="text" id="username" name="username">
-
         <!-- Form Submission -->
         <input type="submit" value="Submit">
     </form>
-    <script src="scripts/script.js" defer></script>
-    
+    <script src="scripts/form.js" defer></script>
     <footer>
-        <p>© 2024 🌴Smith Eutrope Zephirin🌴 Last Modified: <span id="last-modified"></span></p>
+        <p>© 2024 🌴Smith Eutrope Zephirin🌴 Saint Louis | Last Modified: <span id="last-modified"></span></p>
     </footer>
 </body>
 </html>
