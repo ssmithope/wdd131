@@ -1,37 +1,54 @@
+:root {
+    --main-bg-color: #a7928b;
+    --main-font-color: #000000;
+    --header-bg-color: #FF7F50;
+    --header-font-color: #e8edee;
+    --accent-color: #1f0381;
+    --highlight-color: #6b6b7e;
+    --footer-bg-color: #FF7F50;
+    --button-bg-color: #0033A0;
+    --button-font-color: #FFFFFF;
+    --font-family: 'Open Sans', sans-serif;
+    --header-font-family: 'Montserrat', sans-serif;
+    --padding-space: 20px;
+    --margin-space: 20px;
+    --border-radius: 10px;
+}
+
 body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #FFFFFF; /* White */
-    color: #000000; /* Black */
+    font-family: var(--font-family);
+    background-color: var(--main-bg-color);
+    color: var(--main-font-color);
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
     padding: 0;
-    padding-top: 100px; /* Add padding at the top to offset the header */
+    padding-top: 100px;
 }
 
 header {
     background-size: cover;
-    background-color: #8dc8f3; 
-    color: #e8edee; /* White */
+    background-color: var(--header-bg-color);
+    color: var(--header-font-color);
     text-align: center;
     padding: 10px 10px;
-    position: fixed; /* Fixed position */
+    position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    transition: transform 0.3s ease; /* Smooth transition effect */
+    transition: transform 0.3s ease;
 }
 
 .header-hidden {
-    transform: translateY(-100%); /* Move header out of view */
+    transform: translateY(-100%);
 }
 
 h1 {
-    color: #6b6b7e; 
-    background: linear-gradient(to right, #3b5285, #0a0909);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--highlight-color);
+    background: linear-gradient(to right, #3b5285, var(--main-font-color));
     background-clip: text; /* Standard property */
+    -webkit-background-clip: text; /* Webkit-specific */
+    -webkit-text-fill-color: transparent; /* Webkit-specific */
 }
 
 nav ul {
@@ -47,62 +64,62 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #FFFFFF;
+    color: var(--header-font-color);
     text-decoration: none;
     font-weight: bold;
 }
 
 footer {
-    background-color: #759de9; /* Blue */
-    color: #FFFFFF; /* White */
+    background-color: var(--footer-bg-color);
+    color: var(--header-font-color);
     text-align: center;
-    padding: 20px 10px;
+    padding: var(--padding-space) 10px;
 }
 
 h2 {
-    font-family: 'Montserrat', sans-serif;
-    color: #0a0909; /* Dark color for contrast */
+    font-family: var(--header-font-family);
+    color: var(--main-font-color);
 }
 
 .content {
-    margin: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
-    padding: 20px;
-    border-radius: 10px;
+    margin: var(--margin-space);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: var(--padding-space);
+    border-radius: var(--border-radius);
 }
 
 .content img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease; /* Hover effect */
+    border-radius: var(--border-radius);
+    transition: transform 0.3s ease;
 }
 
 .content img:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+    transform: scale(1.05);
 }
 
 .content section {
-    margin-bottom: 20px;
+    margin-bottom: var(--margin-space);
 }
 
 button {
-    background-color: #1f0381; /* Gold */
-    color: #FFFFFF;
+    background-color: var(--button-bg-color);
+    color: var(--button-font-color);
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 5px; /* Corrected value */
     cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--header-font-family);
     display: block;
-    margin: 20px auto;
+    margin: var(--margin-space) auto;
     font-size: 16px;
 }
 
 .container {
     max-width: 1200px;
     margin: auto;
-    padding: 20px;
+    padding: var(--padding-space);
 }
 
 form {
@@ -131,10 +148,10 @@ input, textarea, button {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #0033A0; /* Blue */
-    color: #FFFFFF; /* White */
+    background-color: var(--button-bg-color);
+    color: var(--button-font-color);
     border: none;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 5px; /* Corrected value */
     cursor: pointer;
 }
