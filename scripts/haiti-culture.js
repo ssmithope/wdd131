@@ -9,10 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('nav ul li a');
     navLinks.forEach(link => {
         link.addEventListener('click', function (event) {
-            event.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-            targetElement.scrollIntoView({ behavior: 'smooth' });
+            if (this.getAttribute('href').startsWith('#')) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
         });
     });
 
@@ -40,4 +44,5 @@ document.addEventListener('DOMContentLoaded', function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 });
+
 console.log('Discover Haiti script loaded!');
